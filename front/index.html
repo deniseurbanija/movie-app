@@ -3,30 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Movie App</title>
   </head>
   <body>
     <div id="container">
+      <!-- nav bar starts -->
       <nav>
-        <div>
+        <div id="logo">
           <h4>Movie App</h4>
         </div>
         <div>
           <ul>
-            <li>Home</li>
+            <li><a href="index.html">Home</a></li>
             <li>Explore</li>
-            <li>About this project</li>
+            <li><a href="about.html">About this project</a></li>
           </ul>
         </div>
       </nav>
+      <!-- nav bar ends -->
+
+      <!-- image slider starts -->
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <div class="slide first">
+            <img src="./img/1.png" />
+          </div>
+          <div class="slide">
+            <img src="./img/2.png" />
+          </div>
+          <div class="slide">
+            <img src="./img/3.png" />
+          </div>
+          <!--auto navegation-->
+          <div class="navegation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+          <!--auto navegation-->
+        </div>
+        <!--manual navegation-->
+        <div class="navegation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+        <!--manual navegation-->
+      </div>
+      <!-- image slider ends -->
+
       <section>
-        <h4>Trending</h4>
+        <h3>Trending 🔥</h3>
         <div class="cardContainer"></div>
       </section>
     </div>
 
-    <script src="./scripts/tempData.js"></script>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 3) {
+          counter = 1;
+        }
+      }, 5000);
+    </script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
