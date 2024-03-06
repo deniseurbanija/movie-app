@@ -1,5 +1,5 @@
 $.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
-  const cardContainer = document.querySelector(".cardContainer");
+  const cardContainer = document.querySelector("#cardContainer");
   const convert = (data) => {
     const { poster, title, year, duration } = data;
 
@@ -22,6 +22,7 @@ $.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
 
     const card = document.createElement("div");
     card.classList.add("card");
+   
     card.append(moviePoster, movieTitle, movieDuration, movieYear);
 
     return card;

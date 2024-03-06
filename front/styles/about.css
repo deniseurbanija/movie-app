@@ -10,39 +10,11 @@ body {
   margin: 0 auto;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-nav div ul {
-  display: flex;
-  flex-direction: row;
-  width: 400px;
-  justify-content: space-between;
-  list-style-type: none;
-  color: rgba(255, 255, 255, 0.622);
-  cursor: pointer;
-  :hover {
-    color: white;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.622);
-}
-
-#logo {
-  width: 700px;
-}
-
 #about {
   display: block;
   margin-top: 100px;
   width: 900px;
   padding: 50px;
-  background-color: rgba(128, 128, 128, 0.423);
   align-items: center;
   text-align: center;
   margin: 80px auto;
