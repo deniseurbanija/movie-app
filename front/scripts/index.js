@@ -1,5 +1,20 @@
 const renderCards = require("./renderCards");
+const axios = require("axios");
 
-$.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
-  renderCards(data);
-});
+const fetchData = async () => {
+  try {
+    const movies = await axios.get(
+      "https://students-api.up.railway.app/movies"
+    );
+    return movies.data;
+  } catch (error) {
+    console.error(error);
+    throw Error;
+  }
+};
+
+fetchData()
+  .then((data) => renderCards(data))
+  .catch((error) =>
+    console.error("Hubo un error al obtener los datos:", error)
+  );

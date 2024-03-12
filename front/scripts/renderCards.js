@@ -9,6 +9,7 @@ const renderCards = (data) => {
     const movieTitle = document.createElement("a");
     movieTitle.classList.add("title");
     movieTitle.href = "";
+    //textContent
     movieTitle.innerHTML = movie.title;
 
     const movieYear = document.createElement("p");
@@ -19,10 +20,14 @@ const renderCards = (data) => {
     movieDuration.classList.add("duration");
     movieDuration.innerHTML = movie.duration;
 
+    const info = document.createElement("div");
+    info.classList.add("info");
+    info.append(movieTitle, movieDuration, movieYear);
+
     const card = document.createElement("div");
     card.classList.add("card");
 
-    card.append(moviePoster, movieTitle, movieDuration, movieYear);
+    card.append(moviePoster, info);
     cardContainer.appendChild(card);
   });
 };
