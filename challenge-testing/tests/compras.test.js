@@ -27,10 +27,12 @@ describe("Test de carrito de compra", () => {
   });
 
   it("calcularTotal() debe calcular el total", () => {
+    carritoCompra.agregarProducto({ name: "Book", price: 20 });
     expect(carritoCompra.calcularTotal()).toEqual(20);
   });
 
   it("aplicarDescuento() debe aplicar porcentaje especificado", () => {
+    carritoCompra.agregarProducto({ name: "Book", price: 20 });
     expect(carritoCompra.aplicarDescuento(50)).toBe(10);
   });
 });
