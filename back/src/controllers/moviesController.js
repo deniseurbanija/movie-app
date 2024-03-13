@@ -1,7 +1,9 @@
-const moviesController = (req, res) => {
-  res
-    .status(200)
-    .send("próximamente estarán disponibles los datos de películas.");
-};
+const moviesService = require("../services/moviesService");
 
-module.exports = moviesController;
+module.exports = {
+  getAllMovies: async (req, res) => {
+    const movies = moviesService.getMovies();
+
+    res.json(movies);
+  },
+};
