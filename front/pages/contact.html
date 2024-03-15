@@ -56,34 +56,55 @@
         class="container d-flex justify-content-center w-75"
         style="padding: 50px"
       >
-        <form>
-          <div class="mb-3" style="margin-top: 2rem">
+        <form id="form" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="validationCustom01" class="form-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              class="form-control p-2 mb-2"
+              id="validationCustom01"
+              required
+            />
+            <div class="form-text text-secondary invalid-feedback">
+              Please enter your name
+            </div>
+          </div>
+
+          <div class="mb-4">
             <label for="exampleInputEmail1" class="form-label"
               >Email address</label
             >
             <input
               type="email"
-              class="form-control p-2"
+              class="form-control p-2 mb-2"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="name@example.com"
+              required
             />
-            <div id="emailHelp" class="form-text text-secondary">
-              We'll never share your email with anyone else.
+            <div
+              id="emailHelp"
+              class="form-text text-secondary invalid-feedback"
+            >
+              Please enter an email
             </div>
-            <div class="mb-3" style="margin-top: 2rem">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Leave you message here</label
-              >
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="4"
-              ></textarea>
-            </div>
-            <div class="col-12" style="margin-top: 2rem">
-              <button class="btn btn-primary" type="submit">Submit form</button>
-            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Leave you message here</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
           </div>
         </form>
       </div>
@@ -93,5 +114,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../scripts/contact.js"></script>
   </main>
 </html>

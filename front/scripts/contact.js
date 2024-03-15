@@ -1,10 +1,11 @@
 (function () {
-  const form = document.querySelector(".#form");
+  const form = document.querySelector("#form");
   form.addEventListener("submit", (event) => {
     if (!form.checkValidity()) {
       event.preventDefault(), event.stopPropagation();
+      form.classList.add("was-validated");
+    } else {
+      alert("mensaje validado");
     }
-    form.classList.add("was-validated");
-    alert("mensaje validado");
   });
 })();
