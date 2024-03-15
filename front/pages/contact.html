@@ -9,7 +9,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../styles/contact.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
     <title>Contact</title>
   </head>
   <main>
@@ -19,7 +19,12 @@
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <div id="logo">
-              <h4>Movie App</h4>
+              <a
+                class="nav-link link-light fs-5 fw-bolder"
+                aria-current="page"
+                href="index.html"
+                >Movie App</a
+              >
             </div>
             <div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -30,9 +35,6 @@
                     href="index.html"
                     >Home</a
                   >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active link-light" href="#">Explore</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active link-light" href="about.html"
@@ -53,17 +55,17 @@
 
       <div
         id="form-container"
-        class="container d-flex justify-content-center w-75"
-        style="padding: 50px"
+        class="container d-flex justify-content-center"
+        style="padding: 40px"
       >
-        <form id="form" class="needs-validation" novalidate>
+        <form id="form" class="needs-validation w-50" novalidate>
           <div class="mb-3">
             <label for="validationCustom01" class="form-label"
               >First name</label
             >
             <input
               type="text"
-              class="form-control p-2 mb-2"
+              class="form-control p-1 mb-2"
               id="validationCustom01"
               required
             />
@@ -78,7 +80,7 @@
             >
             <input
               type="email"
-              class="form-control p-2 mb-2"
+              class="form-control p-1 mb-2"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="name@example.com"
@@ -99,7 +101,7 @@
             <textarea
               class="form-control"
               id="exampleFormControlTextarea1"
-              rows="4"
+              rows="3"
               required
             ></textarea>
           </div>

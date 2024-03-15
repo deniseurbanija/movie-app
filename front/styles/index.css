@@ -5,111 +5,9 @@ body {
   color: white;
 }
 
-#container {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-/* slider styles */
-
-.slider {
-  width: 1150px;
-  height: 500px;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-.slides {
-  width: 500%;
-  height: 500px;
-  display: flex;
-}
-
-.slides input {
-  display: none;
-}
-
-.slide {
-  transition: 2s;
-}
-
-.slide img {
-  width: 1150px;
-  height: 500px;
-  object-fit: cover;
-}
-
-/* manual navegation */
-.navegation-manual {
-  display: flex;
-  position: absolute;
-  width: 1150px;
-  margin-top: -40px;
-  justify-content: center;
-}
-
-.manual-btn {
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 5px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 30px;
-}
-
-.manual-btn:hover {
-  background-color: white;
-}
-
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-  margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-  margin-left: -40%;
-}
-
-/* auto navegation styles */
-
-.navegation-auto {
-  position: absolute;
-  display: flex;
-  width: 1150px;
-  justify-content: center;
-  margin-top: 460px;
-}
-
-.navegation-auto div {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
-}
-
-.navegation-auto div:not(:last-child) {
-  margin-right: 30px;
-}
-
-#radio1:checked ~ .navegation-auto .auto-btn1 {
-  background: white;
-}
-#radio2:checked ~ .navegation-auto .auto-btn2 {
-  background: white;
-}
-#radio3:checked ~ .navegation-auto .auto-btn3 {
-  background: white;
-}
-
 /* movies styles */
 hr {
-  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 #cardContainer {
@@ -197,8 +95,4 @@ hr {
 #container {
   max-width: 1150px;
   margin: 0 auto;
-}
-
-h3 {
-  margin-top: 40px;
 }

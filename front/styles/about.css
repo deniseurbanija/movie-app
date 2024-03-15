@@ -5,12 +5,6 @@ body {
   color: white;
 }
 
-#containerAbout {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-
 #about {
   display: block;
   margin-top: 100px;
@@ -19,4 +13,8 @@ body {
   align-items: center;
   text-align: center;
   margin: 80px auto;
+}
+
+p{
+  font-size: large;
 }
