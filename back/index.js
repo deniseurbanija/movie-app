@@ -1,6 +1,8 @@
 const app = require("./src/server");
+const conDB = require("./src/config/confDB");
 
-
-app.listen(3000, () => {
-  console.log("server running on port 3000");
+conDB().then((res) => {
+  app.listen(3000, () => {
+    console.log("server running on port 3000");
+  });
 });
