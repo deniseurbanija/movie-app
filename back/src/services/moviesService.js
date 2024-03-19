@@ -6,8 +6,14 @@ const getMovies = async () => {
   return movies;
 };
 
+const addMovie = async (movie) => {
+  const newMovie = await Movie.create(movie);
+  return newMovie
+};
+
 module.exports = {
   getMovies,
+  addMovie,
 };
 
 // const movies = [];

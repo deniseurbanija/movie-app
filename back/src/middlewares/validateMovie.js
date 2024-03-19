@@ -13,7 +13,7 @@ const validateMovie = (req, res, next) => {
     typeof poster !== "string"
   ) {
     res.status(400).json({
-      error: "Invalid movie data",
+      error: "Some data is missing",
     });
   }
   next();

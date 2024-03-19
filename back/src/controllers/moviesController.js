@@ -11,16 +11,12 @@ module.exports = {
       });
     }
   },
-  postMovie: async (req, res) => {
+  addMovie: async (req, res) => {
     try {
       const { title, year, duration, director, poster } = req.body;
-      moviesService.postMovie(title, year, duration, director, poster);
-      res.status(201).json({
-        message: "Movie added correctly",
-      });
+      const newMovie = await moviesService.addMovie({title, year, duration, director, poster});
+      res.status(201).json(newMovie);
     } catch (error) {
-      // El middleware de validación manejará los errores de datos no válidos
-      // Por lo tanto, aquí solo manejara otros tipos de errores, si los hay
       res.status(500).json({
         error: "Server error",
       });
