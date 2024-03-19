@@ -15,7 +15,7 @@
   <body>
     <div id="container" class="container">
       <!-- nav bar starts -->
-      <div style="margin-top: 1rem; ">
+      <div style="margin-top: 1rem">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <div id="logo">
@@ -37,21 +37,55 @@
                   >
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link active link-light" href="createMovie.html"
+                    >Add Movie
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link active link-light" href="about.html"
                     >About
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active link-light" href="contact.html"
-                    >Contact
-                  </a>
-                </li>
+               
               </ul>
             </div>
           </div>
         </nav>
       </div>
       <!-- nav bar ends -->
+      <!-- image slider starts -->
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <div class="slide first">
+            <img src="../img/1.png" />
+          </div>
+          <div class="slide">
+            <img src="../img/2.png" />
+          </div>
+          <div class="slide">
+            <img src="../img//3.png" />
+          </div>
+          <!--auto navegation-->
+          <div class="navegation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+          <!--auto navegation-->
+        </div>
+        <!--manual navegation-->
+        <div class="navegation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+        <!--manual navegation-->
+      </div>
+      <!-- image slider ends -->
+
       <hr />
 
       <!-- Trending Section -->
