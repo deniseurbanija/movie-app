@@ -2,12 +2,12 @@ const Movie = require("../models/Movie");
 
 const getMovies = async () => {
   const movies = await Movie.find();
-  console.log("estoy funcionando");
   return movies;
 };
 
 const addMovie = async (movie) => {
   const newMovie = await Movie.create(movie);
+  console.log("estoy funcionando");
   return newMovie
 };
 

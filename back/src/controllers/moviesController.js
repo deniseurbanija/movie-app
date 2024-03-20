@@ -14,8 +14,8 @@ module.exports = {
   addMovie: async (req, res) => {
     try {
       const { title, year, duration, director, poster } = req.body;
-      const newMovie = await moviesService.addMovie({title, year, duration, director, poster});
-      res.status(201).json(newMovie);
+      await moviesService.addMovie({title, year, duration, director, poster});
+      res.status(201)
     } catch (error) {
       res.status(500).json({
         error: "Server error",
