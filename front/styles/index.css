@@ -110,27 +110,25 @@ hr {
   margin-bottom: 2rem;
 }
 
-#cardContainer {
-  display: flex;
-  flex-direction: row;
+.cardContainer {
+  display: inline-block;
   justify-content: space-between;
-  margin-top: 20px;
-  height: 400px;
+  white-space: nowrap;
   width: 100%;
 }
 
 .card {
-  display: block;
-  flex-direction: column;
-  width: 155px;
-  height: 236px;
-  padding: 2rem 1rem;
-  position: relative;
-  align-items: flex-end;
-  transition: 0.5s ease-in-out;
+  display: inline-block;
+  width: calc(20% - 10px);
+  height: 20rem;
+  margin: 2rem 4rem 2rem 0;
+  vertical-align: top;
+  transition: 0.5s;
   cursor: pointer;
-  border: none;
-  border-radius: 10px;
+}
+
+.card:last-child {
+  margin-right: 0; /* Elimina el margen derecho de la última card para evitar desbordamientos */
 }
 
 .card:hover {

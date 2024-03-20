@@ -1,39 +1,31 @@
-const handleFormSubmit = async (event) => {
-  event.preventDefault(); // Evita el envío del formulario por defecto
-
+(function () {
   const form = document.querySelector("#form");
   const inputs = form.querySelectorAll("input");
-  let allFieldsCompleted = true;
-
-  // Crear un objeto para almacenar los datos de la película
   const movieData = {};
 
-  inputs.forEach((input) => {
-    if (!input.value.trim()) {
-      allFieldsCompleted = false;
-      input.classList.add("is-invalid");
-    } else {
-      input.classList.remove("is-invalid");
-      // Agregar el valor del input al objeto de datos de la película
-      movieData[input.name] = input.value.trim();
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    let allFieldsCompleted = true;
+
+    inputs.forEach((input) => {
+      if (!input.value) {
+        allFieldsCompleted = false;
+        input.classList.add("is-invalid");
+      } else {
+        input.classList.remove("is-invalid");
+        form.classList.add("was-validated");
+        movieData[input.id] = input.value;
+      }
+    });
+
+    if (allFieldsCompleted) {
+      alert("movie added");
+      try {
+        const res = await axios.post("http://localhost:3000/movies", movieData);
+        console.log("movie added", res.data);
+      } catch (error) {
+        console.error("Error adding movie:", error);
+      }
     }
   });
-
-  if (allFieldsCompleted) {
-    try {
-      // Realizar la solicitud POST utilizando Axios
-      const response = await axios.post(
-        "http://localhost:3000/movies",
-        movieData
-      );
-      console.log("Película creada con éxito:", response.data);
-      // Aquí puedes hacer cualquier otra acción que desees después de crear la película
-    } catch (error) {
-      console.error("Error al crear la película:", error);
-      // Aquí puedes manejar cualquier error que ocurra durante la creación de la película
-    }
-  }
-};
-
-module.exports= handleFormSubmit;
-
+})();

@@ -8,7 +8,7 @@ const renderCards = (data) => {
 
     const movieTitle = document.createElement("a");
     movieTitle.classList.add("title");
-    movieTitle.href = "";
+    movieTitle.href = "../pages/movieInfo.html";
     //textContent
     movieTitle.innerHTML = movie.title;
 
