@@ -14,6 +14,15 @@
       } else {
         input.classList.remove("is-invalid");
         form.classList.add("was-validated");
+
+        if (input.type === "checkbox") {
+          if (input.checked) {
+            if (!movieData.genre) {
+              movieData.genre = [];
+            }
+            movieData.genre.push(input.value);
+          }
+        }
         movieData[input.id] = input.value;
       }
     });
