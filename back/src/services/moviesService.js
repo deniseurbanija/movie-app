@@ -7,7 +7,6 @@ const getMovies = async () => {
 
 const addMovie = async (movie) => {
   const newMovie = await Movie.create(movie);
-  console.log("estoy funcionando");
   return newMovie
 };
 

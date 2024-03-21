@@ -1,5 +1,5 @@
 const validateMovie = (req, res, next) => {
-  const { title, year, duration, director, poster } = req.body;
+  const { title, year, duration, director, genre, rate, poster } = req.body;
   if (
     !title ||
     typeof title !== "string" ||
@@ -9,6 +9,8 @@ const validateMovie = (req, res, next) => {
     typeof duration !== "string" ||
     !director ||
     typeof director !== "string" ||
+    !rate ||
+    typeof rate !== "number" ||
     !poster ||
     typeof poster !== "string"
   ) {

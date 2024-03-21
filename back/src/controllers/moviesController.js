@@ -13,8 +13,16 @@ module.exports = {
   },
   addMovie: async (req, res) => {
     try {
-      const { title, year, duration, director, poster } = req.body;
-      await moviesService.addMovie({title, year, duration, director, poster});
+      const { title, year, duration, director, genre, rate, poster } = req.body;
+      await moviesService.addMovie({
+        title,
+        year,
+        duration,
+        director,
+        genre,
+        rate,
+        poster,
+      });
       res.status(201)
     } catch (error) {
       res.status(500).json({
