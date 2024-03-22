@@ -4,21 +4,21 @@ const renderCards = (data) => {
   data.forEach((movie) => {
     const moviePoster = document.createElement("img");
     moviePoster.classList.add("poster");
+
     moviePoster.src = movie.poster;
 
     const movieTitle = document.createElement("a");
     movieTitle.classList.add("title");
     movieTitle.href = "../pages/movieInfo.html";
-    //textContent
-    movieTitle.innerHTML = movie.title;
+    movieTitle.textContent = movie.title;
 
     const movieYear = document.createElement("p");
     movieYear.classList.add("year");
-    movieYear.innerHTML = movie.year;
+    movieYear.textContent = movie.year;
 
     const movieDuration = document.createElement("p");
     movieDuration.classList.add("duration");
-    movieDuration.innerHTML = movie.duration;
+    movieDuration.textContent = movie.duration;
 
     const info = document.createElement("div");
     info.classList.add("info");
@@ -26,7 +26,6 @@ const renderCards = (data) => {
 
     const card = document.createElement("div");
     card.classList.add("card");
-
     card.append(moviePoster, info);
     cardContainer.appendChild(card);
   });

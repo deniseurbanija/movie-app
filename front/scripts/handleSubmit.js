@@ -1,6 +1,6 @@
 (function () {
   const form = document.querySelector("#form");
-  const inputs = form.querySelectorAll("input");
+  const inputs = document.querySelectorAll("input");
   const movieData = {};
 
   form.addEventListener("submit", async (event) => {

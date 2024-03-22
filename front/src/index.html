@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Movie App</title>
+  </head>
+  <body
+    class="bg-slate-100 dark:bg-zinc-900 dark:text-white transition-colors duration-500"
+    x-data="{ darkMode: false }"
+    :class="{ 'dark': darkMode }"
+  >
+    <div id="container" class=" ">
+      <div class="circle"></div>
+      <!-- nav bar starts -->
+
+      <nav
+        class="bg-slate-100 dark:bg-zinc-800 p-4 m-0 rounded-lg flex space-x-12 shadow-md"
+      >
+        <h2 class="text-xl mx-3 font-semibold">Movie App</h2>
+        <ul class="flex space-x-4 flex-1">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./addMovie.html">Add Movie</a></li>
+        </ul>
+        <span
+          @click="darkMode = !darkMode"
+          :class="{ 'bg-red-500': darkMode, 'bg-gray-200': !darkMode }"
+          class="bg-gray-200 relative inline-block flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline"
+          role="checkbox"
+          tabindex="0"
+          aria-checked="false"
+        >
+          <span
+            x-show="darkMode"
+            aria-hidden="true"
+            class="translate-x-5 inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200"
+          ></span>
+          <span
+            x-show="!darkMode"
+            aria-hidden="true"
+            class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200"
+          ></span>
+        </span>
+      </nav>
+      <!--nav bar ends-->
+      <section
+        class="p-28 text-center text-8xl font-serif text-zinc-900 dark:text-slate-100"
+      >
+        <h1>Your Favorite Romance Movies</h1>
+      </section>
+
+      <!-- Trending Section -->
+      <section class="p-6 m-2">
+        <h4>Recently Added 🔥</h4>
+        <div id="cardContainer" class="flex justify-between mt-4"></div>
+      </section>
+      <!-- Trending Section -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.3.2/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/mouse.js"></script>
+    <script src="../public/bundle.js"></script>
+  </body>
+</html>

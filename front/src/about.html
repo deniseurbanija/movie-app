@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>Movie App</title>
+  </head>
+  <body
+    class="bg-slate-100 dark:bg-zinc-900 dark:text-white transition-colors duration-500"
+    x-data="{ darkMode: false }"
+    :class="{ 'dark': darkMode }"
+  >
+    <div id="container">
+      <div class="circle"></div>
+
+      <!-- nav bar starts -->
+      <nav
+        class="bg-slate-100 dark:bg-zinc-800 p-4 m-0 rounded-lg flex space-x-12 shadow-md"
+      >
+        <h2 class="text-lg font-semibold">Movie App</h2>
+        <ul class="flex space-x-4 flex-1">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./addMovie.html">Add Movie</a></li>
+        </ul>
+        <span
+          @click="darkMode = !darkMode"
+          :class="{ 'bg-red-500': darkMode, 'bg-gray-200': !darkMode }"
+          class="bg-gray-200 relative inline-block flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline"
+          role="checkbox"
+          tabindex="0"
+          aria-checked="false"
+        >
+          <span
+            x-show="darkMode"
+            aria-hidden="true"
+            class="translate-x-5 inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200"
+          ></span>
+          <span
+            x-show="!darkMode"
+            aria-hidden="true"
+            class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200"
+          ></span>
+        </span>
+      </nav>
+      <!--nav bar ends-->
+      <div id="about" class="p-16">
+        <h2 class="text-center text-2xl">About this project</h2>
+        <p class="text-lg p-5">
+          This is a movie application using technologies such as
+          <span class="text-red-500">Node.js</span>,
+          <span class="text-red-500">Express</span>,
+          <span class="text-red-500">MongoDB</span> and
+          <span class="text-red-500">Bootstrap</span>
+          . The application displays movies through cards, allowing users to add
+          and remove movies from a REST API. With an intuitive interface, users
+          can explore details of each movie and efficiently manage their
+          collection. Thanks to AJAX, the application offers a real-time
+          interactive experience, while Node.js and Express handle server
+          requests and logic. MongoDB and Mongoose are responsible for storing
+          and manipulating data efficiently, while Bootstrap ensures an
+          appealing design across different devices.
+        </p>
+        <h2 class="text-center text-2xl mt-2">About me</h2>
+        <p class="text-lg p-5">
+          🙋🏼‍♀️ I'm Denise Urbanija, a Computer Science student and participant in
+          the SoyHenry Bootcamp. I consider myself a disciplined person, with an
+          innate ability to learn when I am involved in what I am passionate
+          about. My main motivation in my professional career lies in being an
+          active part of the dynamic growth and constant evolution of the
+          technology sector. 🚀 You can reach me out
+          <a
+            href="https://www.linkedin.com/in/denise-urbanija/"
+            class="text-red-500"
+            >LinkedIn</a
+          >
+          or see my work on
+          <a href="https://github.com/deniseurbanija" class="text-red-500"
+            >GitHub</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="../scripts/mouse.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.3.2/dist/alpine.min.js"
+      defer
+    ></script>
+  </body>
+</html>

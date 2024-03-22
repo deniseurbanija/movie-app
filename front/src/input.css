@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  width: 200px;
+  border: 1px solid rgb(32, 32, 32);
+  transition: 0.5s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 10px 5px 5px rgba(121, 120, 120, 0.761);
+}
+
+.poster {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.info {
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.circle {
+  width: 100vh;
+  height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    #d82650a7 0%,
+    #e9435e5c 50%,
+    #9b0c1fc8 70%,
+    #45171bb9 100%
+  );
+  border-radius: 50%;
+  position: fixed;
+  transition: transform 0.1s ease-out;
+  opacity: 0.4;
+  box-shadow: 0px 0px 5vh rgba(0, 0, 0, 0.5);
+  filter: blur(10vh);
+  z-index: -1;
+}
