@@ -24,6 +24,7 @@
           }
         }
         movieData[input.id] = input.value;
+        input.value = "";
       }
     });
 

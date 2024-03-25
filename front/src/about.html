@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <title>Movie App</title>
+    <title>Fav Movies</title>
   </head>
   <body
-    class="bg-slate-100 dark:bg-zinc-900 dark:text-white transition-colors duration-500"
-    x-data="{ darkMode: false }"
+    x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }"
     :class="{ 'dark': darkMode }"
+    class="dark:bg-gray-950 dark:text-white"
   >
     <div id="container">
       <div class="circle"></div>
 
       <!-- nav bar starts -->
       <nav
-        class="bg-slate-100 dark:bg-zinc-800 p-4 m-0 rounded-lg flex space-x-12 shadow-md"
+        class="bg-slate-50 dark:bg-zinc-800 p-4 m-0 rounded-lg flex space-x-12 shadow-md w-full fixed"
       >
-        <h2 class="text-xl mx-3 font-semibold">Movie App</h2>
+        <h2 class="text-xl mx-3 text-red-500">
+          <a href="./index.html">Fav Movies</a>
+        </h2>
         <ul class="flex space-x-4 flex-1">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./addMovie.html">Add Movie</a></li>
         </ul>
         <span
-          @click="darkMode = !darkMode"
+          @click="darkMode = !darkMode; localStorage.setItem('darkMode', darkMode.toString())"
           :class="{ 'bg-red-500': darkMode, 'bg-gray-200': !darkMode }"
           class="bg-gray-200 relative inline-block flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline"
           role="checkbox"
@@ -46,21 +48,19 @@
         </span>
       </nav>
       <!--nav bar ends-->
-      <div id="about" class="p-16">
+      <div id="about" class="p-28">
         <h2 class="text-center text-2xl">About this project</h2>
         <p class="text-lg p-5">
-          This is a movie application using technologies such as
+          This is a movie web site developed using technologies such as
           <span class="text-red-500">Node.js</span>,
           <span class="text-red-500">Express</span>,
           <span class="text-red-500">MongoDB</span> and
-          <span class="text-red-500">Bootstrap</span>
-          . The application displays movies through cards, allowing users to add
-          and remove movies from a REST API. With an intuitive interface, users
-          can explore details of each movie and efficiently manage their
-          collection. Thanks to AJAX, the application offers a real-time
+          <span class="text-red-500">Tailwind CSS</span>
+          . The web site displays movies through cards, allowing users to add
+          and remove movies from a REST API. Thanks to AJAX, the application offers a real-time
           interactive experience, while Node.js and Express handle server
           requests and logic. MongoDB and Mongoose are responsible for storing
-          and manipulating data efficiently, while Bootstrap ensures an
+          and manipulating data efficiently, while Tailwind CSS ensures an
           appealing design across different devices.
         </p>
         <h2 class="text-center text-2xl mt-2">About me</h2>
