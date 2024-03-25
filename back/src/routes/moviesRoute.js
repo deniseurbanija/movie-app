@@ -6,5 +6,6 @@ const router = Router();
 
 router.get("/movies", moviesController.getAllMovies);
 router.post("/movies", validateMovie, moviesController.addMovie);
+router.delete("/movies/:title", moviesController.deleteMovie);
 
 module.exports = router;

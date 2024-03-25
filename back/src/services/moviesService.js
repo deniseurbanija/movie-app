@@ -7,12 +7,22 @@ const getMovies = async () => {
 
 const addMovie = async (movie) => {
   const newMovie = await Movie.create(movie);
-  return newMovie
+  return newMovie;
+};
+
+const deleteMovie = async (title) => {
+  try {
+    await Movie.findOneAndDelete({ title });
+  } catch (error) {
+    console.error("Error al eliminar película:", error);
+    throw error;
+  }
 };
 
 module.exports = {
   getMovies,
   addMovie,
+  deleteMovie,
 };
 
 // const movies = [];

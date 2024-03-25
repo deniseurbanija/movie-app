@@ -20,7 +20,14 @@ const addMovie = async (req, res) => {
   res.status(201);
 };
 
+const deleteMovie = async (req, res) => {
+  const { title } = req.params;
+  await moviesService.deleteMovie(title);
+  res.send({ message: "Movie deleted successfully" });
+};
+
 module.exports = {
   getAllMovies: catchAsync(getAllMovies),
   addMovie: catchAsync(addMovie),
+  deleteMovie,
 };
