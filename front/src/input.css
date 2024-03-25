@@ -19,22 +19,20 @@
   height: 250px;
   object-fit: cover;
 }
+.title {
+  font-weight: 600;
+  font-size: large;
+}
 
 .info {
-  margin-top: 5px;
+  margin: 6px;
   padding: 2px;
 }
 
 .circle {
   width: 100vh;
   height: 100vh;
-  background: radial-gradient(
-    circle at center,
-    #d82650a7 0%,
-    #e9435e5c 50%,
-    #9b0c1fc8 70%,
-    #45171bb9 100%
-  );
+  background: radial-gradient(circle at center, #c00420a7 0%, #fc23265c 50%);
   border-radius: 50%;
   position: fixed;
   transition: transform 0.1s ease-out;
